@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/images/Ritebook-Logo.png" type="image/png">
+    <link rel="shortcut icon" href="assets/images/Ritebook Logo.png" type="image/png">
+    <title>RiteBook</title>
+    
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-scholar.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+<!--
+
+TemplateMo 586 Scholar
+
+-->
+    <style>
+      /* Simple Gallery Styles */
+      .gallery-item {
+        margin-bottom: 30px;
+        border-radius: 25px;
+        overflow: hidden;
+        box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+      }
+      .gallery-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 5px 20px rgba(0,0,0,0.15);
+      }
+      .gallery-item img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+      }
+      .gallery-content {
+        padding: 20px;
+        background: #fff;
+        text-align: center;
+      }
+      .gallery-content h4 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #1e1e1e;
+        margin-bottom: 10px;
+      }
+
+      /* --- NEW CSS FOR COLLEGE PARTNERS LIST --- */
+      .partners-section {
+        padding-top: 80px;
+        padding-bottom: 50px;
+        background-color: #fcfcfc;
+      }
+      .partner-item {
+        background: #fff;
+        border: 1px solid #eee;
+        border-radius: 15px;
+        padding: 20px;
+        margin-bottom: 30px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+      .partner-item:hover {
+        box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+        transform: translateY(-3px);
+        border-color: #7a6ad8;
+      }
+      .partner-item img {
+        max-width: 80%;
+        max-height: 80px;
+        filter: grayscale(100%); /* Makes logos black & white initially */
+        opacity: 0.7;
+        transition: all 0.3s ease;
+      }
+      .partner-item:hover img {
+        filter: grayscale(0%); /* Color on hover */
+        opacity: 1;
+      }
+      /* Fallback text if no image */
+      .partner-name {
+        font-weight: 600;
+        font-size: 14px;
+        color: #333;
+        text-align: center;
+      }
+      /* --- ARTIFEX SHOWCASE SECTION CSS --- */
+      .artifex-section {
+        padding: 80px 0;
+        background-color: #f1f0fe; /* Light purple accent bg */
+        position: relative;
+      }
+      .artifex-section .section-heading {
+        text-align: left;
+        margin-bottom: 30px;
+      }
+      .artifex-section .section-heading h2 {
+        font-size: 36px;
+        color: #1e1e1e;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      .artifex-features {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0 30px 0;
+      }
+      .artifex-features li {
+        font-size: 16px;
+        color: #4a4a4a;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+      }
+      .artifex-features li i {
+        color: #7a6ad8;
+        font-size: 18px;
+        margin-right: 15px;
+        background: #fff;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        border-radius: 50%;
+        box-shadow: 0px 2px 10px rgba(0,0,0,0.05);
+      }
+      .artifex-image {
+        text-align: center; /* Center the image in the column */
+      }
+      .artifex-image img {
+        max-width: 450px; /* Adjusted width limit */
+        width: 100%;      /* Responsive width */
+        height: 450px;     /* Maintain aspect ratio */
+        border-radius: 25px;
+        box-shadow: 0px 10px 30px rgba(122, 106, 216, 0.2);
+        transition: all 0.3s ease;
+      }
+      .artifex-image:hover img {
+        transform: scale(1.02);
+      }
+      /* --- PALS (Pragmatiq Academy) SECTION CSS --- */
+      .pals-section {
+        padding: 80px 0;
+        background-color: #eef7ff; /* Soft blue accent bg */
+        position: relative;
+      }
+      .pals-section .section-heading {
+        text-align: left;
+        margin-bottom: 30px;
+      }
+      .pals-section .section-heading h2 {
+        font-size: 36px;
+        color: #1e1e1e;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      .pals-gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+      }
+      .pals-gallery-grid img {
+        width: 100%;
+        height: 180px; /* Fixed height for uniformity */
+        object-fit: cover;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+      }
+      .pals-gallery-grid img:hover {
+        transform: scale(1.03);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      }
+
+      /* --- TEAM SECTION ADJUSTMENTS --- */
+      #team .section-heading {
+        display: inline-block;
+        background: #fff;
+        padding: 6px 20px;
+        position: relative;
+        z-index: 10;
+        margin-bottom: 12px; /* reduced gap below heading */
+        border-radius: 6px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+      }
+      .team.section {
+        padding-top: 40px; /* reduced top spacing */
+        padding-bottom: 40px;
+      }
+      .team .team-members {
+        margin-top: 100px; /* reduced gap so heading sits closer to portraits */
+      }
+      .team-member .main-content img {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 6px solid #fff;
+        box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+        display: block;
+        margin: 0 auto 12px;
+      }
+
+      @media (max-width: 991px) {
+        .team.section { padding-top: 30px; }
+        .team .team-members { margin-top: 70px; }
+      }
+
+      @media (max-width: 767px) {
+        .team.section { padding-top: 20px; }
+        .team .team-members { margin-top: 20px; }
+        .team-member .main-content img { width: 140px; height: 140px; border: 5px solid #fff; }
+        #team .section-heading { display: block; padding: 0; margin-bottom: 12px; }
+      }
+
+    </style>
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+                        <img src="assets/images/Ritebook-Logo.png" alt="RiteBook Logo">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                      <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                      <li class="scroll-to-section"><a href="#services">COE</a></li>
+                      <li class="scroll-to-section"><a href="#about">About</a></li>
+                      <li class="scroll-to-section"><a href="#colleges">Colleges</a></li> <!-- ADDED NEW LINK -->
+                      <li class="scroll-to-section"><a href="#gallery">Gallery</a></li>
+                      <li class="scroll-to-section"><a href="#contact">Contact</a></li>
+                    </ul>   
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="main-banner" id="top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="owl-carousel owl-banner">
+            <div class="item item-1">
+              <div class="header-text">
+                <span class="category">RiteBook Technologies Pvt Ltd</span>
+                <h2>Bridging Academia and Industry</h2>
+                <p>We provide a two-way bridge between academic institutions and the industry through our Industry Center of Excellence (COE), empowering students with corporate readiness and cutting-edge skills.</p>
+                <div class="buttons">
+                  <div class="main-button">
+                    <a href="#contact">Partner With Us</a>
+                  </div>
+                  <div class="icon-button">
+                    <a href="#services"><i class="fa fa-play"></i> Explore COE</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item item-2">
+              <div class="header-text">
+                <span class="category">Powered by Pragmatiq Systems</span>
+                <h2>Enterprise-Grade Technology Platforms</h2>
+                <p>A subsidiary of Pragmatiq Systems (Est. 2019), we leverage disruptive technology in Healthcare, Agriculture, and Education to solve real-world challenges.</p>
+                <div class="buttons">
+                  <div class="main-button">
+                    <a href="#about">Our Vision</a>
+                  </div>
+                  <div class="icon-button">
+                    <a href="#services"><i class="fa fa-play"></i> Tech Stack</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item item-3">
+              <div class="header-text">
+                <span class="category">The CONNECT Platform</span>
+                <h2>Next Gen AI Learning</h2>
+                <p>Our whitelabelled CONNECT platform, built on the proprietary PURPLEGENE Gen AI engine, personalizes learning using behavioral assessments for students and faculty.</p>
+                <div class="buttons">
+                  <div class="main-button">
+                    <a href="#contact">Get CONNECT</a>
+                  </div>
+                  <div class="icon-button">
+                    <a href="#courses"><i class="fa fa-play"></i> Features</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="services section" id="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <img src="assets/images/service-01.png" alt="COE">
+            </div>
+            <div class="main-content">
+              <h4>Industry COE</h4>
+              <p>Establish strong Industry-Institute connects via MOUs, internships, and research projects. We help alleviate institutional performance in NAAC, NBA, and NIRF accreditations.</p>
+              <div class="main-button">
+                <a href="#contact">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <img src="assets/images/service-02.png" alt="Connect Platform">
+            </div>
+            <div class="main-content">
+              <h4>CONNECT Platform</h4>
+              <p>An integrated tool with LMS, coding compiler, and test engine. Built on PURPLEGENE, it offers personalized learning based on VPK and Big Five behavioral frameworks.</p>
+              <div class="main-button">
+                <a href="#contact">View Features</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <img src="assets/images/service-03.png" alt="Student Benefits">
+            </div>
+            <div class="main-content">
+              <h4>Student Success</h4>
+              <p>Prepare for corporate life with Artifex Events (Hackathons), seminars, and training in Agentic AI, Metaverse, and IoT. Improve employability in HealthTech and EduTech.</p>
+              <div class="main-button">
+                <a href="#contact">For Students</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section about-us" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-1">
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  About Pragmatiq Systems
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Founded in 2019 in Hyderabad, Pragmatiq operates on three pillars: Tech Partnerships, Product Platforms, and Academy. We focus on Healthcare (<strong>Clinally®</strong>), Agriculture (<strong>Landlordz</strong>), and Education (<strong>PurpleGene®</strong>).
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Benefits to the Institution
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  The COE helps source funds for research, supplements academic processes with expert resources, and improves accreditation scores (NAAC/NBA). We facilitate collaboration with startups for real-world projects.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Faculty Development
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  We foster an environment of Upskilling, Research, and Innovation through FDPs and workshops. Our platform allows faculty to monitor student performance via detailed analytics and conduct coding sessions.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  Technology Stack
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Our expertise covers a modern portfolio including Java, Python, Node.js, Angular, React, and AWS/Azure deployment, with strong capabilities in <code>Generative AI</code>.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 align-self-center">
+          <div class="section-heading">
+            <h6>About Us</h6>
+            <h2>RiteBook Technologies</h2>
+            <p>RiteBook Technologies Pvt Ltd is a subsidiary of Pragmatiq Systems Pvt Ltd. We are an EdTech solutions provider dedicated to bridging the gap between academia and industry. Through our COE and the CONNECT platform, we empower institutions, students, and faculty with sustainable technology and AI-driven insights.</p>
+            <div class="main-button">
+              <a href="#contact">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section fun-facts">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="wrapper">
+            <div class="row">
+              <div class="col-lg-3 col-md-6">
+                <div class="counter">
+                  <h2 class="timer count-title count-number" data-to="10000" data-speed="1000"></h2>
+                   <p class="count-text ">Students Enrolled</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="counter">
+                  <h2 class="timer count-title count-number" data-to="4" data-speed="1000"></h2>
+                  <p class="count-text ">Focus Verticals</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="counter">
+                  <h2 class="timer count-title count-number" data-to="50" data-speed="1000"></h2>
+                  <p class="count-text ">Engaged Colleges</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="counter end">
+                  <h2 class="timer count-title count-number" data-to="2" data-speed="1000"></h2>
+                  <p class="count-text ">Ways to Connect</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features List -->
+
+  <div class="team section" id="team">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6">
+          <div class="team-member">
+            <div class="main-content">
+              <img src="assets/images/connect.png" alt="Connect Platforms">
+              <span class="category">Technology</span>
+              <h4>Connect Platforms</h4>
+              <ul class="social-icons">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="team-member">
+            <div class="main-content">
+              <img src="assets/images/ice cubes.png" alt="Ice Cubes">
+              <span class="category">Innovation</span>
+              <h4>Ice Cube</h4>
+              <ul class="social-icons">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="team-member">
+            <div class="main-content">
+              <img src="assets/images/palslogo.png" alt="PALS">
+              <span class="category">Education</span>
+              <h4>PALS (Academy)</h4>
+              <ul class="social-icons">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="team-member">
+            <div class="main-content">
+              <img src="assets/images/artifex.png" alt="ARTIFEX">
+              <span class="category">Events</span>
+              <h4>ARTIFEX</h4>
+              <ul class="social-icons">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ***** NEW ARTIFEX SHOWCASE SECTION ***** -->
+  <div class="section artifex-section" id="artifex">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-self-center">
+          <div class="section-heading">
+            <h6>Flagship Event</h6>
+            <h2>Artifex: Find X-Factor in You</h2>
+            <p><strong>Artifex</strong> is a campus-wide talent discovery event designed to engage every type of student—technical, creative, and innovative.
+               With multiple competition tracks, it helps students uncover their unique strengths beyond academics.</p>
+            <ul class="artifex-features">
+              <li><i class="fa fa-code"></i> Coding & Technical Challenges</li>
+              <li><i class="fa fa-laptop-code"></i> Ideation & Innovation Tracks</li>
+              <li><i class="fa fa-users"></i> Creative & Design Competitions</li>
+              <li><i class="fa fa-trophy"></i> Cash Prizes & Internship Opportunities</li>
+            </ul>
+            <div class="main-button">
+              <a href="#contact">Host Artifex at Your Campus</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="artifex-image">
+             <!-- Placeholder for Artifex specific image -->
+             <img src="assets/images/artifex logo.png " alt="Artifex Hackathon Crowd" style="width: 450;height: 450;"> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ***** End Artifex Section ***** -->
+
+  <!-- ***** NEW PALS (Pragmatiq Academy) SECTION ***** -->
+  <div class="section pals-section" id="pals">
+    <div class="container">
+      <div class="row">
+        <!-- Images Left -->
+        <div class="col-lg-6">
+           <div class="pals-gallery-grid">
+             <!-- Placeholder images for Group Photos/Training -->
+             <img src="assets/images/palslogo.png" alt="PALS Training Session">
+             <img src="assets/images/palsstudents2.jpeg" alt="Students in Classroom">
+             <img src="assets/images/palsstudents3.png" alt="Vocational Course">
+             <img src="assets/images/palsstudents1.jpeg" alt="Group Photo Chennai">
+           </div>
+        </div>
+        <!-- Text Right -->
+        <div class="col-lg-6 align-self-center">
+          <div class="section-heading">
+            <h6>Vocational Excellence</h6>
+            <h2>Pragmatiq Academy of Life Sciences (PALS)</h2>
+            <p>Expanding our horizon beyond traditional engineering, <strong>PALS</strong> is currently operational in Chennai, offering specialized vocational courses. We focus on bridging the skill gap by providing hands-on training and certification.</p>
+            <p>Our Chennai campus is a hub of activity where we train students from diverse backgrounds, equipping them with industry-ready skills. We are proud of our vibrant student community.</p>
+            <div class="main-button">
+              <a href="#contact">Enquire About Courses</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ***** End PALS Section ***** -->
+
+  <!-- ***** NEW SECTION: Partner Colleges List ***** -->
+  <div class="partners-section" id="colleges">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <div class="section-heading">
+            <h6>Our Network</h6>
+            <h2>Our Academic Engagements</h2>
+            <p>Institutions where we’ve conducted workshops, training programs, internships, and job drives</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Partner Grid Start (6 Columns for Desktop, 4 for Tablet, 2 for Mobile) -->
+      <div class="row justify-content-center">
+        
+        <!-- College 1 -->
+        <div class="col-lg-2 col-md-3 col-6">
+            <div class="partner-item">
+                <!-- Replace 'src' with actual college logo URL -->
+                <img src="assets/images/college-logo1.png" alt="College Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="partner-name" style="display:none;">Alpha Inst. of Tech</div>
+            </div>
+        </div>
+        
+        <!-- College 2 -->
+        <div class="col-lg-2 col-md-3 col-6">
+            <div class="partner-item">
+                <img src="assets/images/college-logo2.png" alt="College Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="partner-name" style="display:none;">Global Engg. College</div>
+            </div>
+        </div>
+
+        <!-- College 3 -->
+        <div class="col-lg-2 col-md-3 col-6">
+            <div class="partner-item">
+                <img src="assets/images/college-logo3.png" alt="College Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="partner-name" style="display:none;">City University</div>
+            </div>
+        </div>
+
+        <!-- College 4 -->
+        <div class="col-lg-2 col-md-3 col-6">
+            <div class="partner-item">
+                <img src="assets/images/college-logo4.png" alt="College Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="partner-name" style="display:none;">St. Mary's College</div>
+            </div>
+        </div>
+
+        <!-- College 5 -->
+        <div class="col-lg-2 col-md-3 col-6">
+            <div class="partner-item">
+                <img src="assets/images/college-logo5.png" alt="College Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="partner-name" style="display:none;">Tech Valley Inst.</div>
+            </div>
+        </div>
+
+        <!-- College 6 -->
+        <div class="col-lg-2 col-md-3 col-6">
+            <div class="partner-item">
+                <img src="assets/images/college-logo6.png" alt="College Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="partner-name" style="display:none;">Future Minds Univ.</div>
+            </div>
+        </div>
+
+        <!-- College 7 -->
+        <div class="col-lg-2 col-md-3 col-6">
+            <div class="partner-item">
+                <img src="assets/images/college-logo7.png" alt="College Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="partner-name" style="display:none;">Royal College</div>
+            </div>
+        </div>
+
+        <!-- College 8 -->
+        <div class="col-lg-2 col-md-3 col-6">
+            <div class="partner-item">
+                <img src="assets/images/college-logo8.png" alt="College Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="partner-name" style="display:none;">National Science Inst.</div>
+            </div>
+        </div>
+
+        <!-- College 9 -->
+        <div class="col-lg-2 col-md-3 col-6">
+            <div class="partner-item">
+                <img src="assets/images/college-logo9.png" alt="College Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="partner-name" style="display:none;">Innovation Hub</div>
+            </div>
+        </div>
+
+        <!-- College 10 -->
+        <div class="col-lg-2 col-md-3 col-6">
+            <div class="partner-item">
+                <img src="assets/images/college-logo10.png" alt="College Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="partner-name" style="display:none;">Metro Engineering</div>
+            </div>
+        </div>
+
+        <!-- College 11 -->
+        <div class="col-lg-2 col-md-3 col-6">
+            <div class="partner-item">
+                <img src="assets/images/college-logo11.png" alt="College Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="partner-name" style="display:none;">Sunrise Academy</div>
+            </div>
+        </div>
+
+        <!-- College 12 -->
+        <div class="col-lg-2 col-md-3 col-6">
+            <div class="partner-item">
+                <img src="assets/images/college-logo12.png" alt="College Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="partner-name" style="display:none;">Vignana College</div>
+            </div>
+        </div>
+
+        <!-- College 13 -->
+        <div class="col-lg-2 col-md-3 col-6">
+            <div class="partner-item">
+                <img src="assets/images/college-logo13.png" alt="College Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="partner-name" style="display:none;">Lakeside University</div>
+            </div>
+        </div>
+
+        <!-- College 14 -->
+        <div class="col-lg-2 col-md-3 col-6">
+            <div class="partner-item">
+                <img src="assets/images/college-logo14.png" alt="College Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="partner-name" style="display:none;">Advanced Tech Coll.</div>
+            </div>
+        </div>
+
+        <!-- College 15 -->
+        <div class="col-lg-2 col-md-3 col-6">
+            <div class="partner-item">
+                <img src="assets/images/college-logo15.png" alt="College Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="partner-name" style="display:none;">Bright Path Inst.</div>
+            </div>
+        </div>
+
+        <!-- College 16 -->
+        <div class="col-lg-2 col-md-3 col-6">
+            <div class="partner-item">
+                <img src="assets/images/college-logo16.png" alt="College Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="partner-name" style="display:none;">Delta Sciences</div>
+            </div>
+        </div>
+
+        <!-- College 17 -->
+        <div class="col-lg-2 col-md-3 col-6">
+            <div class="partner-item">
+                <img src="assets/images/college-logo17.png" alt="College Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="partner-name" style="display:none;">Universal Engg.</div>
+            </div>
+        </div>
+
+        <!-- College 18 -->
+        <div class="col-lg-2 col-md-3 col-6">
+            <div class="partner-item">
+                <img src="assets/images/college-logo18.png" alt="College Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="partner-name" style="display:none;">Pacific Tech</div>
+            </div>
+        </div>
+
+      </div>
+      <!-- Partner Grid End -->
+
+    </div>
+  </div>
+  <!-- ***** End Partner Colleges Section ***** -->
+
+  <!-- ***** UPDATED TEAM SECTION ***** -->
+  <div class="team section" id="team">
+    <div class="container">
+      <div class="row">
+         <!-- Section Heading added for clarity -->
+         <div class="col-lg-12 text-center" style="margin-bottom: 12px;">
+             <div class="section-heading">
+                <h6>Leadership</h6>
+                <h2>Meet Our Team</h2>
+             </div>
+        </div>
+  </div>
+  <div class="row team-members">
+        <!-- Member 1: Bharat Kumar Reddy -->
+        <div class="col-lg-3 col-md-6">
+          <div class="team-member">
+            <div class="main-content">
+              <!-- Placeholder image: You can replace 'assets/images/member1.jpg' with your actual file -->
+              <img src="assets/images/bharat.png" alt="Bharat Kumar Reddy" onerror="this.src='https://via.placeholder.com/500x500.png?text=Bharat+Reddy';">
+              <span class="category">Leadership</span>
+              <h4>Bharat Kumar Reddy</h4>
+              <ul class="social-icons">
+                <li><a href="https://www.linkedin.com/in/gbkreddy/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Member 2: Raghavender Srirampur -->
+        <div class="col-lg-3 col-md-6">
+          <div class="team-member">
+            <div class="main-content">
+              <!-- Placeholder image -->
+              <img src="assets/images/ragavendra.png" alt="Raghavender Srirampur" onerror="this.src='https://via.placeholder.com/500x500.png?text=Raghavender+S';">
+              <span class="category">Leadership</span>
+              <h4>Raghavender Srirampur</h4>
+              <ul class="social-icons">
+                <li><a href="https://www.linkedin.com/in/raghavender-srirampur/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Member 3: Venkateshwar Prasad Tangirala -->
+        <div class="col-lg-3 col-md-6">
+          <div class="team-member">
+            <div class="main-content">
+              <!-- Placeholder image -->
+              <img src="assets/images/tv prasad.png" alt="Venkateshwar Prasad Tangirala" onerror="this.src='https://via.placeholder.com/500x500.png?text=Dr+Venkateshwar';">
+              <span class="category">Leadership</span>
+              <h4>Dr. Venkateshwar Prasad Tangirala</h4>
+              <ul class="social-icons">
+                <li><a href="https://www.linkedin.com/in/venkateshwar-prasad-tangirala-phd/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Member 4: NV Ramana -->
+        <div class="col-lg-3 col-md-6">
+          <div class="team-member">
+            <div class="main-content">
+              <!-- Placeholder image -->
+              <img src="assets/images/NV Ramaa.png" alt="NV Ramana" onerror="this.src='https://via.placeholder.com/500x500.png?text=NV+Ramana';">
+              <span class="category">Leadership</span>
+              <h4>Prof. NV Ramana</h4>
+              <ul class="social-icons">
+                <li><a href="https://www.linkedin.com/in/nv-ramana/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+  <div class="section testimonials">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <div class="owl-carousel owl-testimonials">
+            <div class="item">
+              <p>“I am from Non IT Background I learned fullstack development in purplegene and currently iam working as Flutter fullstack developer ”</p>
+              <div class="author">
+                <img src="assets/images/test3.png" alt="">
+                <span class="category">Software Developer</span>
+                <h4>Hemanth Karlapudi</h4>
+              </div>
+            </div>
+            <div class="item">
+              <p>“The CONNECT platform is a game changer. The personalized learning based on behavioral assessment really helps students understand their strengths.”</p>
+              <div class="author">
+                <img src="assets/images/test2.png" alt="">
+                <span class="category">Trainee</span>
+                <h4>Pavan Kumar</h4>
+              </div>
+            </div>
+            <div class="item">
+              <p>“Through Artifex events and hackathons, I gained the confidence to tackle corporate challenges. The placement support is exceptional.”</p>
+              <div class="author">
+                <img src="assets/images/test1.png" alt="">
+                <span class="category">Final Year Student</span>
+                <h4>Student Leader</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 align-self-center">
+          <div class="section-heading">
+            <h6>Impact</h6>
+            <h2>What our partners say?</h2>
+            <p>From improving NAAC & NBA accreditation scores to empowering students with cutting-edge skills in AI and IoT, RiteBook is transforming the educational landscape.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ***** Student Activities Gallery Section ***** -->
+  <div class="section events" id="gallery" style="padding-top: 80px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <div class="section-heading">
+            <h6>Campus Life</h6>
+            <h2>Student Activities & Events Gallery</h2>
+            <p>Highlights from our Artifex Events, Hackathons, Workshops, and Seminars.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Gallery Grid -->
+      <div class="row">
+        <div class="col-lg-3 col-md-6">
+          <div class="gallery-item">
+            <!-- Placeholder for user image -->
+            <img src="assets/images/img6.png" alt="Hackathon Event">
+            <div class="gallery-content">
+              <h4>PurpleGene® Features</h4>
+              <p>Explaining about Purplegene features.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="gallery-item">
+            <!-- Placeholder for user image -->
+            <img src="assets/images/img1.png" alt="Workshop">
+            <div class="gallery-content">
+              <h4>Gen AI Workshop</h4>
+              <p>Hands-on training session on Generative AI.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="gallery-item">
+            <!-- Placeholder for user image -->
+            <img src="assets/images/img2.png" alt="Seminar">
+            <div class="gallery-content">
+              <h4>Industry Seminar</h4>
+              <p>Expert talk on Sustainable Technology.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="gallery-item">
+            <!-- Placeholder for user image -->
+            <img src="assets/images/img3.png" alt="Coding Event">
+            <div class="gallery-content">
+              <h4>Coding Challenge</h4>
+              <p>Upgrading student skillset by Industry Experts.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="gallery-item">
+            <!-- Placeholder for user image -->
+            <img src="assets/images/img4.png" alt="Award Ceremony">
+            <div class="gallery-content">
+              <h4>Industry Experts Guidance</h4>
+              <p>Three days workshop by Industry Experts.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="gallery-item">
+            <!-- Placeholder for user image -->
+            <img src="assets/images/img5.png" alt="Group Discussion">
+            <div class="gallery-content">
+              <h4>Artifical Intelligence</h4>
+              <p>Connecting students with corporate opportunities.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="gallery-item">
+            <!-- Placeholder for user image -->
+            <img src="assets/images/wrk3.png" alt="Group Discussion">
+            <div class="gallery-content">
+              <h4>Placement Drive</h4>
+              <p>Connecting students with corporate opportunities.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="gallery-item">
+            <!-- Placeholder for user image -->
+            <img src="assets/images/wrk6.png" alt="Group Discussion">
+            <div class="gallery-content">
+              <h4>Event Sponsrship by PurpleGene®</h4>
+              <p>Connecting students with corporate opportunities.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="gallery-item">
+            <!-- Placeholder for user image -->
+            <img src="assets/images/wrk8.png" alt="Group Discussion">
+            <div class="gallery-content">
+              <h4>ARTIFEX Stall</h4>
+              <p>Students  actively Registering for ARTIFEX competition.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="gallery-item">
+            <!-- Placeholder for user image -->
+            <img src="assets/images/wrk7.png" alt="Group Discussion">
+            <div class="gallery-content">
+              <h4>Skill Development Approach By Pragmatiq Systems</h4>
+              <p>Connecting students with corporate opportunities.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="gallery-item">
+            <!-- Placeholder for user image -->
+            <img src="assets/images/wrk4.png" alt="Group Discussion">
+            <div class="gallery-content">
+              <h4>Students job drive written exam by software company</h4>
+              <p>Connecting students with corporate opportunities.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="gallery-item">
+            <!-- Placeholder for user image -->
+            <img src="assets/images/n5.png" alt="Group Discussion">
+            <div class="gallery-content">
+              <h4>AIML workshop in Gudlavellore College, Guntur</h4>
+              <p>Connecting students with corporate opportunities.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="gallery-item">
+            <!-- Placeholder for user image -->
+            <img src="assets/images/n1.png" alt="Group Discussion">
+            <div class="gallery-content">
+              <h4>Python Hands-on experience </h4>
+              <p>Connecting students with corporate opportunities.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="gallery-item">
+            <!-- Placeholder for user image -->
+            <img src="assets/images/n2.png" alt="Group Discussion">
+            <div class="gallery-content">
+              <h4>Smart Computing Intelligence at Loyala College</h4>
+              <p>Connecting students with corporate opportunities.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="gallery-item">
+            <!-- Placeholder for user image -->
+            <img src="assets/images/n3.png" alt="Group Discussion">
+            <div class="gallery-content">
+              <h4>React Fullstack Development</h4>
+              <p>Connecting students with corporate opportunities.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="gallery-item">
+            <!-- Placeholder for user image -->
+            <img src="assets/images/n4.png" alt="Group Discussion">
+            <div class="gallery-content">
+              <h4>Web development workshop in Godlavellore College</h4>
+              <p>Connecting students with corporate opportunities.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ***** End Gallery Section ***** -->
+
+  <div class="contact-us section" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6  align-self-center">
+          <div class="section-heading">
+            <h6>Contact Us</h6>
+            <h2>Partner with RiteBook</h2>
+            <p>Establish a Center of Excellence at your institution today. Improve admissions, placements, and accreditation scores with our comprehensive EdTech solutions.</p>
+            <div class="special-offer">
+              <span class="offer">New<br><em>COE</em></span>
+              <h6>Join the revolution</h6>
+              <h4>Get <em>CONNECT</em> Platform</h4>
+              <a href="#"><i class="fa fa-angle-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="contact-us-content">
+            <form id="contact-form" action="" method="post">
+              <div class="row">
+                <div class="col-lg-12">
+                  <fieldset>
+                    <input type="name" name="name" id="name" placeholder="Your Name..." autocomplete="on" required>
+                  </fieldset>
+                </div>
+                <div class="col-lg-12">
+                  <fieldset>
+                    <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your E-mail..." required="">
+                  </fieldset>
+                </div>
+                <div class="col-lg-12">
+                  <fieldset>
+                    <textarea name="message" id="message" placeholder="I am interested in RiteBook COE for..."></textarea>
+                  </fieldset>
+                </div>
+                <div class="col-lg-12">
+                  <fieldset>
+                    <button type="submit" id="form-submit" class="orange-button">Contact Now</button>
+                  </fieldset>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="col-lg-12">
+        <p>Copyright © 2025 RiteBook Technologies. All rights reserved. &nbsp;&nbsp;&nbsp;</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/counter.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+  <script>
+    // Fix: Force preloader to hide if external JS fails
+    window.addEventListener('load', function() {
+      var preloader = document.getElementById('js-preloader');
+      if (preloader) {
+        preloader.style.transition = 'opacity 0.6s ease';
+        preloader.style.opacity = '0';
+        preloader.style.visibility = 'hidden';
+        setTimeout(function() {
+          preloader.style.display = 'none';
+        }, 600);
+      }
+    });
+    // Fallback: Ensure it hides even if load event misses or hangs
+    setTimeout(function() {
+      var preloader = document.getElementById('js-preloader');
+      if (preloader) {
+        preloader.style.display = 'none';
+      }
+    }, 2000);
+  </script>
+
+  </body>
+
+</html>
