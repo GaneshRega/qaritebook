@@ -300,15 +300,12 @@ Header Style
 }
 
 /* Make nav bar items vertically centered */
-.header-area .main-nav { position: relative; }
-.header-area .main-nav .logo {
-  /* keep logo in normal flow so it stays left-aligned */
-  position: relative;
-  left: auto;
-  top: auto;
-  transform: none;
-  z-index: 101;
-} 
+.header-area .main-nav {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
 /* Keep logo nicely aligned and not too big */
 .header-area .logo {
@@ -381,12 +378,11 @@ Header Style
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-}
-
-
   position: relative;
   z-index: 999;
 }
+
+
 
 .header-area .main-nav .nav li:last-child {
   padding-right: 0px;
